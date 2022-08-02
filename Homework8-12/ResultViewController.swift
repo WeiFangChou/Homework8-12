@@ -67,7 +67,7 @@ class ResultViewController: UIViewController {
         
         if let birthday = birthday {
             let lifeNumber = calculate(date: birthday)
-            let lifepath = calculateLifePathString(lifeNumber: lifeNumber)
+            let lifepath = lifePathNumber[lifeNumber]
             
             lifepathLabel.text = lifepath.main
             advantageLabel.text = lifepath.advantage
@@ -117,10 +117,6 @@ class ResultViewController: UIViewController {
         }else{
             return starSign[11]
         }
-    }
-    
-    func calculateLifePathString(lifeNumber: Int) -> LifePathNumber{
-        return lifePathNumber[lifeNumber]
     }
     
     
